@@ -22,14 +22,15 @@ export function Player ({playerId}) {
         <div className='flex items-center place-content-center'>
           <Counter minValue={-2} maxValue={200} defaultValue={40} setValue={setLives} value={lives} />
         </div>
-        <div className='row-span-2 flex items-center place-content-center'>
-          <div className='grid overflow-hidden grid-rows-2 grid-cols-3 gap-2 grid-flow-row'>
+        <div className='flex items-center place-content-center'>
+          <Counter minValue={-2} maxValue={200} defaultValue={40} setValue={setPoison} value={poison} style={'bg-white/50 rounded-md'} />
+        </div>
+        <div className='col-span-2'>
+          <div className='inline-grid overflow-hidden grid-rows-2 grid-cols-3 gap-3'>
             {otherPlayers.map((player) => <MiniCounter key={player.id} playerId={player.id} minValue={0} maxValue={21} defaultValue={0} setLives={setLives} lives={lives} />)}
           </div>
         </div>
-        <div className='flex items-center place-content-center'>
-          <Counter minValue={-2} maxValue={200} defaultValue={40} setValue={setPoison} value={poison} style={'bg-white/50 rounded-md pb-3 px-3'} />
-        </div>
+
         
       </div>
     </div>
