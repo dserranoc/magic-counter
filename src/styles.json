@@ -4,60 +4,70 @@
       "id": 1,
       "color": "bg-red-700",
       "rotation": {
-        "2": "rotate-90",
-        "3": "rotate-90",
-        "4": "rotate-180",
-        "5": "rotate-180",
-        "6": "rotate-180"
+        "2": "rotate-180",
+        "3": "rotate-180",
+        "4": "rotate-90",
+        "5": "rotate-90",
+        "6": "rotate-90"
       },
       "span": {
-        "3": "row-span-2"
+        "3": "col-span-2"
       }
     },
     {
       "id": 2,
       "color": "bg-blue-700",
       "rotation": {
-        "2": "-rotate-90",
-        "3": "rotate-180",
-        "4": "rotate-180",
-        "5": "rotate-180",
-        "6": "rotate-180"
+        "3": "rotate-90",
+        "4": "-rotate-90",
+        "5": "-rotate-90",
+        "6": "-rotate-90"
       }
     },
     {
       "id": 3,
       "color": "bg-green-700",
       "rotation": {
-        "6": "rotate-180"
+        "3": "-rotate-90",
+        "4": "rotate-90",
+        "5": "rotate-90",
+        "6": "rotate-90"
       }
     },
     {
       "id": 4,
-      "color": "bg-yellow-300"
+      "color": "bg-yellow-300",
+      "rotation": {
+        "4": "-rotate-90",
+        "5": "-rotate-90",
+        "6": "-rotate-90"
+      }
     },
     {
       "id": 5,
       "color": "bg-purple-700",
       "rotation": {
-        "5": "-rotate-90"
+        "6": "rotate-90"
       },
       "span": {
-        "5": "row-start-1 row-span-2 col-start-3"
+        "5": "col-start-1 col-span-2 row-start-3"
       }
     },
     {
       "id": 6,
-      "color": "bg-orange-700"
+      "color": "bg-orange-700",
+      "rotation": {
+        "6": "-rotate-90"
+      }
     }
   ],
   "board": {
     "playersNumber": {
-      "2": "grid-cols-2 grid-rows-none",
-      "3": "grid-cols-2 grid-rows-2",
-      "4": "grid-cols-2 grid-rows-2",
-      "5": "grid-cols-3 grid-rows-2",
-      "6": "grid-cols-3 grid-rows-2"
+      "2": "grid-cols-none grid-rows-2 h-screen",
+      "3": "grid-cols-2 grid-rows-2 h-screen",
+      "4": "grid-cols-2 grid-rows-2 h-screen",
+      "5": "grid-cols-2 grid-rows-3 h-screen",
+      "6": "grid-cols-2 grid-rows-3 h-screen"
     }
   }
 }

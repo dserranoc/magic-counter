@@ -23,10 +23,10 @@ export default function MiniCounter({minValue, maxValue, defaultValue, setLives,
   }
 
   return (
-    <div className={`${playerStyle.color} rounded-md pb-1 px-3`}>
-      <button className='text-4xl font-bold text-white' onClick={subOne}>-</button>
-      <span className='text-4xl font-bold text-white mx-5 pl-1'>{value}</span>
-      <button className='text-4xl font-bold text-white' onClick={addOne}>+</button>
+    <div className={`${playerStyle.color} rounded-md`}>
+      <button className='text-sm font-bold text-white' onClick={subOne}>-</button>
+      <span className='text-sm font-bold text-white'>{value}</span>
+      <button className='text-sm font-bold text-white' onClick={addOne}>+</button>
     </div>
   )
 }

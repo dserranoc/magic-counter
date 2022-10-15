@@ -14,9 +14,9 @@ export default function Counter({minValue, maxValue, setValue, value, style}) {
 
   return (
     <div className={style}>
-      <button className='text-8xl font-bold text-white' onClick={subOne}>-</button>
-      <span className='text-8xl font-bold text-white mx-5'>{value}</span>
-      <button className='text-8xl font-bold text-white' onClick={addOne}>+</button>
+      <button className='text-sm font-bold text-white' onClick={subOne}>-</button>
+      <span className='text-sm font-bold text-white mx-5'>{value}</span>
+      <button className='text-sm font-bold text-white' onClick={addOne}>+</button>
     </div>
   )
 }

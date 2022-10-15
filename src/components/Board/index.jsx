@@ -12,7 +12,7 @@ export default function Board() {
   const boardStyle = styles.board.playersNumber[playersNumber]
 
   return (
-    <div className={`grid overflow-hidden gap-2 min-h-screen ${boardStyle}`}>
+    <div className={`grid overflow-hidden gap-2 ${boardStyle}`}>
       {
       players
         .map((player) => 
