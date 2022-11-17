@@ -1,15 +1,12 @@
 import { useState } from 'preact/hooks'
 
-export default function Counter({minValue, maxValue, setValue, value, style}) {
-
+export default function Counter ({ minValue, maxValue, setValue, value, style }) {
   const subOne = () => {
-    if (value > minValue)
-      setValue(value-1)
+    if (value > minValue) { setValue(value - 1) }
   }
 
   const addOne = () => {
-    if (value < maxValue)
-      setValue(value+1)
+    if (value < maxValue) { setValue(value + 1) }
   }
 
   return (

@@ -1,22 +1,29 @@
-import { useState, useContext } from 'preact/hooks'
+import { useEffect, useContext } from 'preact/hooks'
 import GameContext from '../../contexts/GameContext'
 import { Player } from '../Player'
+import { useLocation } from 'wouter-preact'
 
+export default function Board () {
+  const { playersNumber, styles } = useContext(GameContext)
 
-
-export default function Board() {
-  const {playersNumber, styles} = useContext(GameContext)
+  const [_, navigate] = useLocation()
 
   const players = styles.players.slice(0, playersNumber)
 
   const boardStyle = styles.board.playersNumber[playersNumber]
 
+  useEffect(() => {
+    if (playersNumber === -1) {
+      navigate('/')
+    }
+  }, [playersNumber, navigate])
+
   return (
     <div className={`grid overflow-hidden gap-2 ${boardStyle}`}>
       {
       players
-        .map((player) => 
-          <Player key={player.id} playerId={player.id}/>
+        .map((player) =>
+          <Player key={player.id} playerId={player.id} />
         )
       }
     </div>

@@ -1,16 +1,11 @@
-import { useState } from 'preact/hooks'
 import './app.css'
-import { Player } from './components/Player'
-import Board from './components/Board'
 import { GameContextProvider } from './contexts/GameContext'
+import Routes from './routes'
 
-export function App() {
-  const [count, setCount] = useState(0)
-
+export function App () {
   return (
-      <GameContextProvider>
-        <Board/>
-      </GameContextProvider>
-
+    <GameContextProvider>
+      <Routes />
+    </GameContextProvider>
   )
 }
