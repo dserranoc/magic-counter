@@ -1,6 +1,7 @@
 import { useEffect, useContext } from 'preact/hooks'
 import GameContext from '../../contexts/GameContext'
 import { Player } from '../Player'
+import Dice from '../Dice'
 import { useLocation } from 'wouter-preact'
 
 export default function Board () {
@@ -20,6 +21,7 @@ export default function Board () {
 
   return (
     <div className={`grid overflow-hidden gap-2 ${boardStyle}`}>
+      <Dice />
       {
       players
         .map((player) =>
