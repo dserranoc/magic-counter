@@ -3,7 +3,7 @@ import GameContext from '../../contexts/GameContext'
 
 export default function GameMode ({ gamemode }) {
   const { setGamemode } = useContext(GameContext)
-  const DEFAULT_GAMEMODE = 'brawl'
+  const DEFAULT_GAMEMODE = 'commander'
   return (
 
     <div>

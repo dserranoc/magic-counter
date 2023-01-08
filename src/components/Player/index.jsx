@@ -5,14 +5,14 @@ import GameContext from '../../contexts/GameContext'
 export function Player ({ playerId }) {
   const { playersNumber, styles, gamemode } = useContext(GameContext)
 
-  const DEFAULT_LIVES = 40
+  const DEFAULT_LIVES = gamemode === 'commander' ? 40 : 30
   const DEFAULT_POISON = 0
   const MIN_VALUE = -2
   const MAX_VALUE = 200
 
   const DEFAULT_MINI_VALUE = 0
   const MINI_MIN_VALUE = 0
-  const MINI_MAX_VALUE = 21
+  const MINI_MAX_VALUE = gamemode === 'commander' ? 21 : 16
 
   const [lives, setLives] = useState(DEFAULT_LIVES)
   const [poison, setPoison] = useState(DEFAULT_POISON)
