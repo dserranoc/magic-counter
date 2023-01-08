@@ -14,7 +14,7 @@ export default function Settings () {
 
       <div>
         <h2 className='text-4xl mb-8'>Establece el modo de juego:</h2>
-        <div className='grid w-[40rem] grid-cols-2 space-x-2 rounded-xl bg-blue-100 p-2 mb-8'>
+        <div className='grid grid-cols-1 md:grid-cols-2 space-x-2 rounded-xl bg-blue-100 p-2 mb-8'>
           <GameOption type='gamemode' content='Brawl' id='brawl' name='gamemode-option' value='brawl' />
           <GameOption type='gamemode' content='Commander' id='commander' name='gamemode-option' value='commander' />
         </div>
@@ -22,7 +22,7 @@ export default function Settings () {
 
       <div>
         <h2 className='text-4xl mb-8'>Establece el número de jugadores:</h2>
-        <div className='grid w-[40rem] grid-cols-5 space-x-2 rounded-xl bg-blue-100 p-2'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 space-x-2 rounded-xl bg-blue-100 p-2'>
           <GameOption type='players' content='2 jugadores' id='2players' name='players-option' value={2} />
           <GameOption type='players' content='3 jugadores' id='3players' name='players-option' value={3} />
           <GameOption type='players' content='4 jugadores' id='4players' name='players-option' value={4} />
