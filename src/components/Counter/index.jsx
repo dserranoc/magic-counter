@@ -12,7 +12,7 @@ export default function Counter ({ minValue, maxValue, setValue, value, style, a
   return (
     <div className={style}>
       <button className='text-4xl font-bold text-white align-middle pl-1 text-border' onClick={subOne}>-&nbsp;</button>
-      <span className={`text-${areMiniShown ? 3 : 5}xl font-bold text-white align-middle text-border`}>{value}</span>
+      <span className={`${areMiniShown ? 'text-3xl' : 'text-5xl'} font-bold text-white align-middle text-border`}>{value}</span>
       <button className='text-4xl font-bold text-white align-middle pr-1 text-border' onClick={addOne}>&nbsp;+</button>
     </div>
   )
