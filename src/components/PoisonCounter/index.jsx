@@ -1,6 +1,6 @@
 import { useState } from 'preact/hooks'
 
-export default function Counter ({ minValue, maxValue, setValue, value, style, areMiniShown }) {
+export default function Counter ({ minValue, maxValue, setValue, value, style, areCommanderShown }) {
   const subOne = () => {
     if (value > minValue) { setValue(value - 1) }
   }
@@ -12,7 +12,7 @@ export default function Counter ({ minValue, maxValue, setValue, value, style, a
   return (
     <div className={style}>
       <button className='text-4xl font-bold text-white align-middle pl-1 text-border' onClick={subOne}>-&nbsp;</button>
-      <span className={`${areMiniShown ? 'text-3xl' : 'text-5xl'} font-bold text-white align-middle text-border`}>{value}</span>
+      <span className={`${areCommanderShown ? 'text-3xl' : 'text-5xl'} font-bold text-white align-middle text-border`}>{value}</span>
       <button className='text-4xl font-bold text-white align-middle pr-1 text-border' onClick={addOne}>&nbsp;+</button>
     </div>
   )

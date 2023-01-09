@@ -10,7 +10,7 @@ export default function Settings () {
     navigate('/game')
   }
   return (
-    <div className='flex items-center justify-center flex-col h-screen bg-blue-200'>
+    <div className='flex items-center justify-center flex-col h-screen bg-blue-200 select-none'>
 
       <div className='w-3/4'>
         <h2 className='text-4xl mb-8'>Establece el modo de juego:</h2>

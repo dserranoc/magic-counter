@@ -20,7 +20,7 @@ export default function Board () {
   }, [playersNumber, navigate])
 
   return (
-    <div className={`grid overflow-hidden gap-2 ${boardStyle}`}>
+    <div className={`grid overflow-hidden gap-2 ${boardStyle} select-none`}>
       <Dice />
       {
       players
