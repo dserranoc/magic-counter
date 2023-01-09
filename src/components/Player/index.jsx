@@ -5,7 +5,7 @@ import GameContext from '../../contexts/GameContext'
 export function Player ({ playerId }) {
   const { playersNumber, styles, gamemode } = useContext(GameContext)
 
-  const DEFAULT_LIVES = gamemode === 'commander' ? 40 : 30
+  const DEFAULT_LIVES = gamemode === 'commander' ? 40 : gamemode === 'pauper' ? 30 : 20
   const DEFAULT_POISON = 0
   const MIN_VALUE = -2
   const MAX_VALUE = 200
@@ -32,11 +32,14 @@ export function Player ({ playerId }) {
         <div className='flex items-center place-content-center'>
           <Counter minValue={MIN_VALUE} maxValue={MAX_VALUE} defaultValue={DEFAULT_LIVES} setValue={setPoison} value={poison} style='bg-white/50 rounded-md' />
         </div>
-        <div className='col-span-2'>
-          <div className='inline-grid overflow-hidden grid-rows-2 grid-cols-3 gap-3'>
-            {otherPlayers.map((player) => <MiniCounter key={player.id} playerId={player.id} minValue={MINI_MIN_VALUE} maxValue={MINI_MAX_VALUE} defaultValue={DEFAULT_MINI_VALUE} setLives={setLives} lives={lives} />)}
+        {gamemode !== 'duel' && (
+          <div className='col-span-2'>
+            <div className='inline-grid overflow-hidden grid-rows-2 grid-cols-3 gap-3'>
+              {otherPlayers.map((player) => <MiniCounter key={player.id} playerId={player.id} minValue={MINI_MIN_VALUE} maxValue={MINI_MAX_VALUE} defaultValue={DEFAULT_MINI_VALUE} setLives={setLives} lives={lives} />)}
+            </div>
           </div>
-        </div>
+        )}
+
       </div>
     </div>
   )
