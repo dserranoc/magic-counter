@@ -14,7 +14,7 @@ export default function Dice () {
     }, 1000)
   }
   return (
-    <div className='bg-white rounded-full w-16 h-16 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-bold text-3xl cursor-pointer flex items-center justify-center border-2 border-gray-200' onClick={roll}>
+    <div className='bg-white rounded-full w-16 h-16 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-bold text-3xl cursor-pointer flex items-center justify-center border-2 border-gray-200 z-50' onClick={roll}>
       {rolling ? <DiceSpinner /> : value}
     </div>
   )

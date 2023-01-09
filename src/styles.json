@@ -12,6 +12,13 @@
       },
       "span": {
         "3": "col-span-2"
+      },
+      "toggleBtnPosition": {
+        "2": "absolute top-4 left-4",
+        "3": "absolute top-4 left-4",
+        "4": "absolute bottom-4 left-4",
+        "5": "absolute bottom-4 left-4",
+        "6": "absolute bottom-4 left-4"
       }
     },
     {
@@ -22,6 +29,13 @@
         "4": "-rotate-90",
         "5": "-rotate-90",
         "6": "-rotate-90"
+      },
+      "toggleBtnPosition": {
+        "2": "absolute bottom-4 right-4",
+        "3": "absolute bottom-4 left-4",
+        "4": "absolute top-4 right-4",
+        "5": "absolute top-4 right-4",
+        "6": "absolute top-4 right-4"
       }
     },
     {
@@ -32,6 +46,12 @@
         "4": "rotate-90",
         "5": "rotate-90",
         "6": "rotate-90"
+      },
+      "toggleBtnPosition": {
+        "3": "absolute top-4 right-4",
+        "4": "absolute bottom-4 left-4",
+        "5": "absolute bottom-4 left-4",
+        "6": "absolute bottom-4 left-4"
       }
     },
     {
@@ -41,6 +61,11 @@
         "4": "-rotate-90",
         "5": "-rotate-90",
         "6": "-rotate-90"
+      },
+      "toggleBtnPosition": {
+        "4": "absolute top-4 right-4",
+        "5": "absolute top-4 right-4",
+        "6": "absolute top-4 right-4"
       }
     },
     {
@@ -51,6 +76,10 @@
       },
       "span": {
         "5": "col-start-1 col-span-2 row-start-3"
+      },
+      "toggleBtnPosition": {
+        "5": "absolute bottom-4 right-4",
+        "6": "absolute bottom-4 left-4"
       }
     },
     {
@@ -58,6 +87,9 @@
       "color": "bg-orange-700",
       "rotation": {
         "6": "-rotate-90"
+      },
+      "toggleBtnPosition": {
+        "6": "absolute top-4 right-4"
       }
     }
   ],
