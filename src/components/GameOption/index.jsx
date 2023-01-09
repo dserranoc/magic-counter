@@ -17,7 +17,7 @@ export default function GameOption ({ content, id, name, value, disabled, checke
   return (
     <div>
       <input type='radio' name={name} id={id} class='peer hidden' onClick={handleClick} disabled={disabled} checked={checked} />
-      <label for={id} className='block cursor-pointer select-none rounded-xl p-2 text-center peer-checked:bg-blue-500 peer-checked:font-bold peer-checked:text-white'>
+      <label for={id} className='block cursor-pointer select-none rounded-xl p-2 text-center peer-checked:bg-red-500 peer-checked:font-bold peer-checked:text-white'>
         {content}
       </label>
     </div>
