@@ -1,20 +1,24 @@
 import { useState, useContext } from 'preact/hooks'
 import GameContext from '../../contexts/GameContext'
-export default function MiniCounter ({ minValue, maxValue, defaultValue, setLives, lives, playerId }) {
-  const [value, setValue] = useState(defaultValue)
-  const { playersNumber, styles } = useContext(GameContext)
+export default function CommanderCounter ({ setLives, lives, playerId }) {
+  const { styles, gamemode } = useContext(GameContext)
 
+  const DEFAULT_VALUE = 0
+  const MIN_VALUE = 0
+  const MAX_VALUE = gamemode === 'commander' ? 21 : 16
+
+  const [value, setValue] = useState(DEFAULT_VALUE)
   const playerStyle = styles.players[playerId - 1]
 
   const subOne = () => {
-    if (value > minValue) {
+    if (value > MIN_VALUE) {
       setValue(value - 1)
       setLives(lives + 1)
     }
   }
 
   const addOne = () => {
-    if (value < maxValue) {
+    if (value < MAX_VALUE) {
       setValue(value + 1)
       setLives(lives - 1)
     }
